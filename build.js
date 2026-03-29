@@ -134,17 +134,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   const rotator = new MessageRotator(board, messages);
   new KeyboardController(rotator, soundEngine);
 
-  let audioInitialized = false;
-  const initAudio = async () => {
-    if (audioInitialized) return;
-    audioInitialized = true;
+  // Auto-inicializar audio (sin esperar interacción del usuario)
+  setTimeout(async () => {
     await soundEngine.init();
     soundEngine.resume();
-    document.removeEventListener('click', initAudio);
-    document.removeEventListener('keydown', initAudio);
-  };
-  document.addEventListener('click', initAudio);
-  document.addEventListener('keydown', initAudio);
+  }, 500);
 
   rotator.start();
 
