@@ -5,7 +5,7 @@ export const SCRAMBLE_DURATION = 0.8 * 1000;   // seconds
 export const FLIP_DURATION    = 0.3 * 1000;   // seconds
 export const STAGGER_DELAY    = 0.025 * 1000; // seconds — delay between tiles
 export const TOTAL_TRANSITION = 3.8 * 1000;   // seconds — full animation duration
-export const MESSAGE_INTERVAL = 4 * 1000;     // seconds — pause after animation
+export const MESSAGE_INTERVAL = 10 * 1000;    // seconds — pause after animation
 
 export const CHARSET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,-!?\'/: ';
 
